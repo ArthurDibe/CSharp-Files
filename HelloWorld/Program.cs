@@ -23,6 +23,8 @@ namespace appTeste
             Console.WriteLine(string.Format("Using \"string.Format()\" method to format: {0:C} Dollars is {1:P} Percentage of the World", 1288, 55));
             Console.WriteLine($"--------------------------------------------------------------------------------------------------------------{br}");
 
+
+            // ###########################################################################################################################################
             string phrase = "This phrase was $ composed in [C# Language] with at no $ cost! :)";
             Console.WriteLine($"Phrase: |{phrase}|");
             Console.WriteLine("-------------------------------------------------------------------");
@@ -35,6 +37,19 @@ namespace appTeste
             string newPhrase = phrase.Replace("C# Language", ".NET Framework");
             Console.WriteLine($"The new Phrase is: |{newPhrase}|");
             Console.WriteLine($"--------------------------------------------------------------------------------------------------------------{br}");
+
+
+            // ###########################################################################################################################################
+            string words = "This is A phrase that all the words are separated by single spaces";
+            string[] wordsArray = words.Split();
+
+            Console.Write("List of words: ");
+            foreach(var word in wordsArray)
+            {
+                Console.Write($"{word}, ");
+            }
+
+            Console.WriteLine();
 
         }
     }
