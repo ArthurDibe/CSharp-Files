@@ -36,21 +36,39 @@ namespace appTeste
 
             string newPhrase = phrase.Replace("C# Language", ".NET Framework");
             Console.WriteLine($"The new Phrase is: |{newPhrase}|");
-            Console.WriteLine($"--------------------------------------------------------------------------------------------------------------{br}");
 
 
             // ###########################################################################################################################################
-            string words = "This is A phrase that all the words are separated by single spaces";
-            string[] wordsArray = words.Split();
+            string[] wordsArray = newPhrase.Split();
 
             Console.Write("List of words: ");
             foreach(var word in wordsArray)
             {
-                Console.Write($"{word}, ");
+                Console.Write($"{word} | ");
             }
 
             Console.WriteLine();
+            Console.WriteLine($"--------------------------------------------------------------------------------------------------------------{br}");
 
+            // ###########################################################################################################################################
+            // Testing strings
+
+            // Existing string, is empty?
+            string emptyString = "";
+            Console.WriteLine("Testing an Empty String Variable...");
+            Console.WriteLine("Empty, using length:  " + (emptyString.Length == 0));
+            Console.WriteLine("Empty, using compare: " + (emptyString == "") + br);
+
+            // String object, not sure whether it's null
+
+            Console.WriteLine("Known, using method:    " + string.IsNullOrEmpty("hello"));
+            Console.WriteLine("Known, using method:    " + string.IsNullOrEmpty(emptyString));
+            string nullString = null;
+            Console.WriteLine("Unknown, using method:  " + string.IsNullOrEmpty(nullString));
+
+            Console.WriteLine(br);
+
+            Console.WriteLine();
         }
     }
 }
